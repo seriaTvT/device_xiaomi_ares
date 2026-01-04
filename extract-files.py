@@ -30,8 +30,7 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'vendor/lib/hw/audio.primary.mt6893.so': blob_fixup()
         .replace_needed('libalsautils.so', 'libalsautils-v30.so')
-        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so')
-        .add_needed('libstagefright_foundation-v33.so'),
+        .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so', 'vendor/lib64/libmtkcam_stdutils.so'): blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
     ('vendor/lib64/libSQLiteModule_VER_ALL.so', 'vendor/lib64/lib3a.flash.so', 'vendor/lib64/lib3a.ae.stat.so', 'vendor/lib64/lib3a.sensors.color.so', 'vendor/lib64/lib3a.sensors.flicker.so', 'vendor/lib64/libaaa_ltm.so'): blob_fixup()
