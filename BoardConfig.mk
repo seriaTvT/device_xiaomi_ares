@@ -11,6 +11,10 @@ TARGET_OTA_ASSERT_DEVICE := ares,aresin
 # Display
 TARGET_SCREEN_DENSITY := 440
 
+# NFC
+ODM_MANIFEST_SKUS += aresin
+ODM_MANIFEST_ARESIN_FILES += $(DEVICE_PATH)/manifest_nonfc.xml
+
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
