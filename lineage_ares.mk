@@ -18,7 +18,10 @@ PRODUCT_NAME := lineage_ares
 PRODUCT_DEVICE := ares
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
-PRODUCT_MODEL := M2012K10C
+# Marketing name, LOS convention (stock keeps the code in ro.product.model and
+# shows ro.product.marketname instead, but LOS UI/USB/BT all read ro.product.model).
+# Same convention as chopin (POCO X3 GT).
+PRODUCT_MODEL := Redmi K40 Gaming
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
