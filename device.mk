@@ -25,9 +25,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
-# XiaomiParts (triggers + RGB LED control)
+# Parts app A/B during the rewrite (see PARTS-REWRITE-PLAN.md):
+# XiaomiParts = legacy (AYIKxD fork), AresParts = org.lineageos.settings.ares
+# rewrite. Flip here to switch; drop the variable and ship AresParts only
+# once the rewrite reaches M5.
+ARES_PARTS_APP := XiaomiParts
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    $(ARES_PARTS_APP)
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
