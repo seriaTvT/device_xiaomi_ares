@@ -25,6 +25,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# XiaomiParts (triggers + RGB LED control)
+PRODUCT_PACKAGES += \
+    XiaomiParts
+
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
