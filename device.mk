@@ -25,13 +25,15 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
-# Parts app A/B during the rewrite (see PARTS-REWRITE-PLAN.md):
-# XiaomiParts = legacy (AYIKxD fork), AresParts = org.lineageos.settings.ares
-# rewrite. Flip here to switch; drop the variable and ship AresParts only
-# once the rewrite reaches M5.
-ARES_PARTS_APP := XiaomiParts
+# Device parts app (triggers, RGB LED, vibration strength)
 PRODUCT_PACKAGES += \
-    $(ARES_PARTS_APP)
+    AresParts
+
+# Neutralize the raw KEY_F1..F6 the xm_gamekey evdev device emits on
+# slider/trigger events; AresParts consumes /dev/gamekey directly, so
+# nothing should see these as function keys.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/keylayout/xm_gamekey.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/xm_gamekey.kl
 
 # Soong
 PRODUCT_SOONG_NAMESPACES += \

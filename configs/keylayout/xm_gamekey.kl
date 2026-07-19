@@ -1,0 +1,10 @@
+# xm_gamekey emits F1/F2 for trigger presses and F3..F6 for slider
+# open/close. AresParts reads the state from /dev/gamekey directly;
+# without this file the Generic.kl mapping leaks function-key events
+# to whatever app is focused. Map them all to nothing.
+key 59    UNKNOWN
+key 60    UNKNOWN
+key 61    UNKNOWN
+key 62    UNKNOWN
+key 63    UNKNOWN
+key 64    UNKNOWN
